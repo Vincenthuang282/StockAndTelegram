@@ -1,6 +1,4 @@
-from audioop import reverse
 import csv
-from turtle import color
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 def PictureMaker2():
