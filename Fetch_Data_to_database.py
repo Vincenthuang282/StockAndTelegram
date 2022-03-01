@@ -20,10 +20,10 @@ import sqlite3
 #c.execute(' CREATE TABLE stocks (Date text, Stock_Name text , Price real) ')
 #c.execute("delete from stocks where Price=3.0")
 #
-for d in range(0,4,1):
+conn=sqlite3.connect('test.db')
+c=conn.cursor()
+for d in range(0,3,1):
     print(d)
-    conn=sqlite3.connect('test.db')
-    c=conn.cursor()
     now=datetime.now()
     date_time= datetime.now()-timedelta(days=d)
     date_time=date_time.strftime("%Y%m%d")
@@ -38,14 +38,14 @@ for d in range(0,4,1):
             c.execute('insert into stocks VALUES(?,?,?)',(date_time,name,price))  
 
 
-        conn.commit()
+        
 
         result=c.execute("select * from stocks")
 
         for row in result:
             print(row)
 
-        conn.close()
+        
 
         print("--------------------------------------------------------------")
         
@@ -53,4 +53,6 @@ for d in range(0,4,1):
         pass
     if(d%6==5):
         time.sleep(60)
-    
+c.execute("delete from stocks where rowid not in (select min(rowid) from stocks group by Date,Stock_Name,Price)") ##delete the same data
+conn.commit() 
+conn.close()

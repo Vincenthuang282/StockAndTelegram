@@ -1,0 +1,32 @@
+Goals in Week:
+	1. Make Sure That the main.py in VM Would be on Service for long
+	2. Added the Recent Stock Data And Show it 
+2/21 :
+	1. Make Sure That the main.py in VM Would be on Service for long 
+	--> nohup python3 main.py& 
+	-->nohup(Put the command"python3 main.py into daemon mode which could run the main.py whenever logout or terminate closure")
+	-->& (Use it to execute the command in the backend)
+
+2/22
+	1. Change the Sequece of Showing depneding on their Heat!!! Done 
+	2.Make the shell script successfully!!! Done
+	3. Change the Date Length into one Month ( 30days ) !!! Done
+	4.Try to make the inline keyboard to show the date option!!!! Not Yet
+2/23 
+	1. Debug the code in VM !!!! ----> done 
+	2. Make the inline keyboard to show the data option!!!!done
+2/25
+	1. Finish the PPt for Precentation!!!!Still Working on it...... :)
+	2. check the Crontab error!!!! Done 
+2/26
+	1.Added the Crontab detail in Flow Chart !! OK
+	2.Added GCE vs GAE detail and different between last and this deployment method........
+3/1
+	1.Add the 通識! ! ! ! 12.30
+		共14學分
+		人文 L M(鋼琴藝術與生活) P V(哲學概論)
+		社會 R(社會未來，科技未來) S T(東亞與世界 經濟全球化3580) W(人際關係與溝通3639)
+		科學 O(智慧型手機程式設計) U ( 生命科學3596 ) Z
+	2.Check the Toeic Test date time (4/24 師大校本部 9.30) and some learning meterial ! ! ! !
+	2.Write the monthly learning report ! ! ! !
+	3.Understanding the Cloud technology in GCE ,GAE and so on .... and Finished the PPT ! ! ! !

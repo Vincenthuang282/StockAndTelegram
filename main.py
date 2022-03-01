@@ -21,6 +21,8 @@ def telegram_bot():
     dp.add_handler(CommandHandler("help",R.help_command))
     dp.add_handler(CommandHandler("Stock",R.Stock_command))
     dp.add_handler(CommandHandler("Picture",R.picture_command))
+    
+    dp.add_handler(CallbackQueryHandler(R.c_back_respons))
     ## MessageHandler ( filter, callback  ) ##
     ## Handler class to handle telegram messages including text,media or status updates ##
     dp.add_handler(MessageHandler(Filters.text,R.handle_message))

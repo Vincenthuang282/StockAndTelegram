@@ -34,21 +34,45 @@ def handle_message(update, context):
     update.message.reply_text(response) 
 def picture_command(update,context):
     input_arr=[]
-    telegram_token='5017912090:AAEMss5Y3TOOpAOwS1J6RQkcNTIQGX0i3CU'
-    #print(telegram_token)
-    telegram_chat_id=update['message']['chat']['id']
-    #print(telegram_chat_id)
     arr=str(update['message']['text']).split()
     for i in range( 1 , len(arr) , 1):
         input_arr.append(arr[i])
-    PictureMaker(input_arr)
-    PictureMaker2()
+    string=" "
+    for i in range(0,len(input_arr),1):
+        string+=input_arr[i]+" "
+    update.message.reply_text('Choose the days u wanna show in'+string ,reply_markup=InlineKeyboardMarkup([
+        [InlineKeyboardButton(text='30days',callback_data='30')],
+        [InlineKeyboardButton(text='45days',callback_data='45')],
+        [InlineKeyboardButton(text='60days',callback_data='60')]
+    ]))
+    #telegram_token='5017912090:AAEMss5Y3TOOpAOwS1J6RQkcNTIQGX0i3CU'
+    ##print(telegram_token)
+    telegram_chat_id=update['message']['chat']['id']
+    print(telegram_chat_id)
+    
+    #PictureMaker(input_arr,day)
+    #PictureMaker2(day)
+    #image_merge()
+    #photo_path='picture/image_result.jpg'
+    #bot=telegram.Bot(token=telegram_token)
+    #bot.send_photo(chat_id=telegram_chat_id,photo=open(photo_path,'rb'))
+
+def c_back_respons(update,context):
+    input_arr=[]
+    days=str(update.callback_query.data)
+    
+    arr=str(update.callback_query.message.text[32:]).split()
+    for i in range(0,len(arr),1):
+        input_arr.append(arr[i])
+    telegram_token='5017912090:AAEMss5Y3TOOpAOwS1J6RQkcNTIQGX0i3CU'
+    telegram_chat_id=update.callback_query.message.chat.id
+    PictureMaker(input_arr,days)
+    PictureMaker2(days)
     image_merge()
     photo_path='picture/image_result.jpg'
     bot=telegram.Bot(token=telegram_token)
     bot.send_photo(chat_id=telegram_chat_id,photo=open(photo_path,'rb'))
-
-
+    
 
 
 def Stock_command(update , context):

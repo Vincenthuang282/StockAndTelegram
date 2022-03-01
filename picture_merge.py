@@ -2,7 +2,7 @@ from PIL import Image
 
 def image_merge():
 
-    image1= Image.open("./picture/result.jpg")
+    image1=Image.open("./picture/result.jpg")
     image2=Image.open("./picture/result2.jpg")
 
 
@@ -17,3 +17,4 @@ def image_merge():
     new_image.paste(image2,(0,image1_size[1]))
     new_image.save("picture/image_result.jpg","JPEG")
     ##new_image.show()
+image_merge()
