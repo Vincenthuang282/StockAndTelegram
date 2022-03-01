@@ -2,7 +2,7 @@
 import csv
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
-day='60'
+
 def PictureMaker2(day):
     a=open("./result_file/發行量加權股價指數.csv","r",encoding="utf-8",newline="")
     reader=csv.reader(a)
@@ -45,4 +45,3 @@ def PictureMaker2(day):
     plt.savefig("./picture/result2.jpg")
     plt.close()
     ##plt.show()
-PictureMaker2(day)
