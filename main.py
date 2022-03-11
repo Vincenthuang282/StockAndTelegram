@@ -9,7 +9,7 @@ def telegram_bot():
     ## This Class ,Which employs the telegram.ext.dispacther , provides a frontend to telegram.Bot to the programmer .... ##
     ## Its propose is to recieve the updates from Telegram and to deliver them to the dispatcher.... ##
     ## The updatercan be started as a polling service or , for production  ##
-    updater = Updater(<telegrambot_API_KET> , use_context=True)
+    updater = Updater("5017912090:AAEMss5Y3TOOpAOwS1J6RQkcNTIQGX0i3CU" , use_context=True)
     ## Dispacther ##
     ## This class dispatches all updates to its registered handler ##
     dp = updater.dispatcher

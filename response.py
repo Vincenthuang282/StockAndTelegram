@@ -64,7 +64,7 @@ def c_back_respons(update,context):
     arr=str(update.callback_query.message.text[32:]).split()
     for i in range(0,len(arr),1):
         input_arr.append(arr[i])
-    telegram_token=<telegrambot_API_KET>
+    telegram_token="5017912090:AAEMss5Y3TOOpAOwS1J6RQkcNTIQGX0i3CU"
     telegram_chat_id=update.callback_query.message.chat.id
     PictureMaker(input_arr,days)
     PictureMaker2(days)
