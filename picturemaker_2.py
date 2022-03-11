@@ -33,7 +33,7 @@ def PictureMaker2(day):
 
 
 
-    ChineseFont1 = FontProperties(fname = 'C:\\Windows\\Fonts\\simsun.ttc')
+    ChineseFont1 = FontProperties(fname = '/home/vincenthuang282/StockAndTelegram/SIMSUN.TTC')
     plt.plot(Date_value,Price_value,"r-o",label='Price')
     plt.title("台灣加權指數",fontproperties=ChineseFont1,x=0.5,y=1.03)
     plt.xticks(fontsize=size,rotation=90)

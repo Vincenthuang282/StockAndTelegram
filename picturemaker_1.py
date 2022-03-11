@@ -26,7 +26,7 @@ def PictureMaker(input,day):
     elif(day=='60'):
         size=4
         days=60
-    dir = r"C:\Users\VINCENT\OneDrive\桌面\Feb(SockAndTelegram)\Stock\result_file"
+    dir = r"/home/vincenthuang282/StockAndTelegram/result_file"
     for row in os.listdir(dir):
         file_name.append(row[:-4])
     for search in input:
@@ -44,7 +44,7 @@ def PictureMaker(input,day):
     sorted_data={}
     arr=[]
     for k in range(0,len(selects),1):
-        ChineseFont1 = FontProperties(fname = 'C:\\Windows\\Fonts\\simsun.ttc')
+        ChineseFont1 = FontProperties(fname = '/home/vincenthuang282/StockAndTelegram/SIMSUN.TTC')
         a=open("./result_file/"+selects[k]+'.csv','r',encoding='utf-8',newline='')
         reader=csv.reader(a)
         status.append([])
