@@ -12,7 +12,7 @@ def start_command(update , context):
     update.message.reply_text('Type Something Random to get started it !')
     
 def help_command(update , context):
-    with open("help.txt","r",encoding='utf-8') as file:
+    with open("/home/vincenthuang282/StockAndTelegram/help.txt","r",encoding='utf-8') as file:
         list=file.read()
         update.message.reply_text(list)
 
@@ -69,7 +69,7 @@ def c_back_respons(update,context):
     PictureMaker(input_arr,days)
     PictureMaker2(days)
     image_merge()
-    photo_path='picture/image_result.jpg'
+    photo_path='/home/vincenthuang282/StockAndTelegram/picture/image_result.jpg'
     bot=telegram.Bot(token=telegram_token)
     bot.send_photo(chat_id=telegram_chat_id,photo=open(photo_path,'rb'))
     

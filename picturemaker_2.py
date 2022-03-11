@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 
 def PictureMaker2(day):
-    a=open("./result_file/發行量加權股價指數.csv","r",encoding="utf-8",newline="")
+    a=open("/home/vincenthuang282/StockAndTelegram/result_file/發行量加權股價指數.csv","r",encoding="utf-8",newline="")
     reader=csv.reader(a)
     Date=[]
     Date_reverse=[]
@@ -42,6 +42,6 @@ def PictureMaker2(day):
     plt.ylabel("Price",fontsize=10,labelpad=2)
     plt.legend(loc="best",fontsize=10)
     plt.tight_layout()
-    plt.savefig("./picture/result2.jpg")
+    plt.savefig("/home/vincenthuang282/StockAndTelegram/picture/result2.jpg")
     plt.close()
     ##plt.show()
