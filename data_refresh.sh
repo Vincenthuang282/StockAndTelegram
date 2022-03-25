@@ -5,4 +5,4 @@ rm /home/vincenthuang282/StockAndTelegram/result_file/*
 python3 /home/vincenthuang282/StockAndTelegram/data_analyist.py 
 git add *
 git commit -m "refresh the data"
-git push https://vincenthuang282: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@github.com/vincenthuang282/StockAndTelegram.git --all
+git push https://Vincenthuang282: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@github.com/Vincenthuang282/StockAndTelegram.git --all
