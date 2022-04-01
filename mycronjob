@@ -1,1 +1,1 @@
-30 5 * * 1-5 sh /home/vincenthuang282/StockAndTelegram/data_refresh.sh 
+#30 5 * * 1-5 sh /home/vincenthuang282/StockAndTelegram/data_refresh.sh 
