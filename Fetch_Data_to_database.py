@@ -22,7 +22,7 @@ import sqlite3
 #
 conn=sqlite3.connect('/home/vincenthuang282/StockAndTelegram/test.db')
 c=conn.cursor()
-for d in range(0,1,1):
+for d in range(0,10,1):
     print(d)
     now=datetime.now()
     date_time= datetime.now()-timedelta(days=d)
