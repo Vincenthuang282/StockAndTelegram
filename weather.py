@@ -4,7 +4,6 @@ from urllib import parse
 from datetime import datetime
 
 def weather(location):
-
     now_time=datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     city=location
     number={
@@ -30,23 +29,22 @@ def weather(location):
         '蘭嶼':'2300334',
         '福建':'12517930',
         '馬祖':'12517946',
-
     }  ##this is the value that i want to specify
     country='臺灣'
-    
+
     #print(location)
 
-    
     query=parse.quote(country+'/'+city+'/'+city+'-'+number[city])
     list=[]
     url='https://tw.news.yahoo.com/weather/'+query
+    print(url)
     html=req.get(url)
     soup=BeautifulSoup(html.text,'html.parser')
     result_temparature_highiest_lowest=soup.findAll('span',attrs={'class':'Va(m) Px(6px)'})
     for result in result_temparature_highiest_lowest:
         list.append(result.text)
     list.append(soup.find('span',attrs={'data-reactid':'37'}).text)
-    list.append(soup.find('div',attrs={'data-reactid':'411'}).text)
-    list.append(soup.find('div',attrs={'data-reactid':'414'}).text)
+    list.append(soup.find('div',attrs={'data-reactid':'412'}).text)
+    list.append(soup.find('div',attrs={'data-reactid':'415'}).text)
 
     return city+"\n"+now_time+"\n當日最高溫度:"+list[0]+"\n當日最低溫度:"+list[1]+"\n現在溫度:"+list[2]+"°\n現在體感溫度:"+list[3]+"\n現在濕度:"+list[4]

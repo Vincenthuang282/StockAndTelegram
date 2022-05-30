@@ -9,30 +9,31 @@ from picturemaker_2 import PictureMaker2
 from picture_merge import image_merge
 import sys
 
-def start_command(update , context):
-    update.message.reply_text('Type Something Random to get started it !')
+#def start_command(update , context):
+#    update.message.reply_text('Type Something Random to get started it !')
     
 def help_command(update , context):
-    with open("/home/vincenthuang282/StockAndTelegram/help.txt","r",encoding='utf-8') as file:
+    with open(r"C:/Users/VINCENT/OneDrive/桌面/StockAndTelegram/help.txt","r",encoding='utf-8') as file:
         list=file.read()
         update.message.reply_text(list)
 
-def handle_message(update, context):
-    text=str(update.message.text).lower()
-    user_message = str(text).lower()
-    print(update['message']['text'])
+#def handle_message(update, context):
+#    text=str(update.message.text).lower()
+#    user_message = str(text).lower()
+#    print(update['message']['text'])
+#
+#    if user_message in ('hello','hi','sup'):
+#        response="Hey How's Going"
+#    elif user_message in ('who are you','who are you?'):
+#        response="I am Vincent's bot!"
+#    elif user_message in ('time','time?'):
+#        now = datetime.now()
+#        date_time = now.strftime("%Y/%m/%d, %H:%M:%S")
+#        response=str(date_time)
+#    else:
+#        response="I don't know"
+#    update.message.reply_text(response) 
 
-    if user_message in ('hello','hi','sup'):
-        response="Hey How's Going"
-    elif user_message in ('who are you','who are you?'):
-        response="I am Vincent's bot!"
-    elif user_message in ('time','time?'):
-        now = datetime.now()
-        date_time = now.strftime("%Y/%m/%d, %H:%M:%S")
-        response=str(date_time)
-    else:
-        response="I don't know"
-    update.message.reply_text(response) 
 def picture_command(update,context):
     input_arr=[]
     arr=str(update['message']['text']).split()
@@ -70,29 +71,32 @@ def c_back_respons(update,context):
     PictureMaker(input_arr,days)
     PictureMaker2(days)
     image_merge()
-    photo_path='/home/vincenthuang282/StockAndTelegram/picture/image_result.jpg'
+    photo_path=r'C:\Users\VINCENT\OneDrive\桌面\StockAndTelegram\picture\image_result.jpg'
     bot=telegram.Bot(token=telegram_token)
     bot.send_photo(chat_id=telegram_chat_id,photo=open(photo_path,'rb'))
     
 
 
 def Stock_command(update , context):
-        print(update)
-        stock_num=update['message']['text'][6:]
-        stock_num=str(stock_num).lstrip()
-        if (stock_num.isspace())|(stock_num == ""):
+        #print(update)
+        stock_name=update['message']['text'][6:]
+        stock_name=(str(stock_name).lstrip()).upper()
+        if (stock_name.isspace())|(stock_name == ""):
             update.message.reply_text("Enter The Correct Number Such As  ------>   /stock TSLA")
         else :
-            news=stock(stock_num)
-            update.message.reply_text(stock_num+' Latest Six News ',
-                reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton(text=news[0]['title'],url=news[0]['url']),],
-                    [InlineKeyboardButton(text=news[1]['title'],url=news[1]['url']),],
-                    [InlineKeyboardButton(text=news[2]['title'],url=news[2]['url']),],
-                    [InlineKeyboardButton(text=news[3]['title'],url=news[3]['url']),],
-                    [InlineKeyboardButton(text=news[4]['title'],url=news[4]['url']),],
-                    [InlineKeyboardButton(text=news[5]['title'],url=news[5]['url']),],
+            try:
+                news=stock(stock_name)
+                update.message.reply_text(stock_name+' Latest Six News ',
+                    reply_markup=InlineKeyboardMarkup([
+                        [InlineKeyboardButton(text=news[0]['title'],url=news[0]['url']),],
+                        [InlineKeyboardButton(text=news[1]['title'],url=news[1]['url']),],
+                        [InlineKeyboardButton(text=news[2]['title'],url=news[2]['url']),],
+                        [InlineKeyboardButton(text=news[3]['title'],url=news[3]['url']),],
+                        [InlineKeyboardButton(text=news[4]['title'],url=news[4]['url']),],
+                        [InlineKeyboardButton(text=news[5]['title'],url=news[5]['url']),],
                                        ] ))
+            except:
+                update.message.reply_text("Couldn't find it!!!!")
     
         
 

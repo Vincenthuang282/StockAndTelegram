@@ -18,7 +18,7 @@ def telegram_bot():
     ## CommandHandler( commands , callback) ##
     ## command--> the command or list of commands this handler should listen for .##
     ## callback--> the callback function for this handler. ##
-    dp.add_handler(CommandHandler("start",R.start_command))
+    ##dp.add_handler(CommandHandler("start",R.start_command))
     dp.add_handler(CommandHandler("help",R.help_command))
     dp.add_handler(CommandHandler("Stock",R.Stock_command))
     dp.add_handler(CommandHandler("Picture",R.picture_command))
@@ -26,7 +26,7 @@ def telegram_bot():
     dp.add_handler(CallbackQueryHandler(R.c_back_respons))
     ## MessageHandler ( filter, callback  ) ##
     ## Handler class to handle telegram messages including text,media or status updates ##
-    dp.add_handler(MessageHandler(Filters.text,R.handle_message))
+    ##dp.add_handler(MessageHandler(Filters.text,R.handle_message))
     dp.add_handler(MessageHandler(Filters.location,R.handle_location))
     
     

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 
 def PictureMaker2(day):
-    a=open("/home/vincenthuang282/StockAndTelegram/result_file/發行量加權股價指數.csv","r",encoding="utf-8",newline="")
+    a=open(r"C:/Users/VINCENT/OneDrive/桌面/StockAndTelegram/result_file/發行量加權股價指數.csv","r",encoding="utf-8",newline="")
     reader=csv.reader(a)
     Date=[]
     Date_reverse=[]
@@ -33,7 +33,7 @@ def PictureMaker2(day):
 
 
 
-    ChineseFont1 = FontProperties(fname = '/home/vincenthuang282/StockAndTelegram/SIMSUN.TTC')
+    ChineseFont1 = FontProperties(fname = r'C:\Users\VINCENT\OneDrive\桌面\StockAndTelegram\SIMSUN.TTC')
     plt.plot(Date_value,Price_value,"r-o",label='Price')
     plt.title("台灣加權指數",fontproperties=ChineseFont1,x=0.5,y=1.03)
     plt.xticks(fontsize=size,rotation=90)
@@ -42,6 +42,6 @@ def PictureMaker2(day):
     plt.ylabel("Price",fontsize=10,labelpad=2)
     plt.legend(loc="best",fontsize=10)
     plt.tight_layout()
-    plt.savefig("/home/vincenthuang282/StockAndTelegram/picture/result2.jpg")
+    plt.savefig(r"C:\Users\VINCENT\OneDrive\桌面\StockAndTelegram\picture\result2.jpg")
     plt.close()
     ##plt.show()
