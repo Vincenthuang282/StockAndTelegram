@@ -1,0 +1,122 @@
+/home/vincenthuang282/.local/lib/python3.6/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+Bot Start...
+5011562773
+['電子']
+30
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/vincenthuang282/StockAndTelegram/response.py", line 76, in c_back_respons
+    PictureMaker(input_arr,days)
+  File "/home/vincenthuang282/StockAndTelegram/picturemaker_1.py", line 30, in PictureMaker
+    for row in os.listdir(dir):
+FileNotFoundError: [Errno 2] No such file or directory: 'C:./result_file'
+['電子']
+30
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/vincenthuang282/StockAndTelegram/response.py", line 76, in c_back_respons
+    PictureMaker(input_arr,days)
+  File "/home/vincenthuang282/StockAndTelegram/picturemaker_1.py", line 30, in PictureMaker
+    for row in os.listdir(dir):
+FileNotFoundError: [Errno 2] No such file or directory: 'C:./result_file'
+['電子']
+30
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/vincenthuang282/StockAndTelegram/response.py", line 76, in c_back_respons
+    PictureMaker(input_arr,days)
+  File "/home/vincenthuang282/StockAndTelegram/picturemaker_1.py", line 30, in PictureMaker
+    for row in os.listdir(dir):
+FileNotFoundError: [Errno 2] No such file or directory: 'C:./result_file'
+['電子']
+30
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/vincenthuang282/StockAndTelegram/response.py", line 76, in c_back_respons
+    PictureMaker(input_arr,days)
+  File "/home/vincenthuang282/StockAndTelegram/picturemaker_1.py", line 30, in PictureMaker
+    for row in os.listdir(dir):
+FileNotFoundError: [Errno 2] No such file or directory: 'C:./result_file'
+['電子']
+45
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/vincenthuang282/StockAndTelegram/response.py", line 76, in c_back_respons
+    PictureMaker(input_arr,days)
+  File "/home/vincenthuang282/StockAndTelegram/picturemaker_1.py", line 30, in PictureMaker
+    for row in os.listdir(dir):
+FileNotFoundError: [Errno 2] No such file or directory: 'C:./result_file'
+['電子']
+60
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/vincenthuang282/StockAndTelegram/response.py", line 76, in c_back_respons
+    PictureMaker(input_arr,days)
+  File "/home/vincenthuang282/StockAndTelegram/picturemaker_1.py", line 30, in PictureMaker
+    for row in os.listdir(dir):
+FileNotFoundError: [Errno 2] No such file or directory: 'C:./result_file'
+['電子']
+30
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/vincenthuang282/StockAndTelegram/response.py", line 76, in c_back_respons
+    PictureMaker(input_arr,days)
+  File "/home/vincenthuang282/StockAndTelegram/picturemaker_1.py", line 30, in PictureMaker
+    for row in os.listdir(dir):
+FileNotFoundError: [Errno 2] No such file or directory: 'C:./result_file'
+5011562773
+['電子']
+30
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/vincenthuang282/StockAndTelegram/response.py", line 76, in c_back_respons
+    PictureMaker(input_arr,days)
+  File "/home/vincenthuang282/StockAndTelegram/picturemaker_1.py", line 30, in PictureMaker
+    for row in os.listdir(dir):
+FileNotFoundError: [Errno 2] No such file or directory: 'C:./result_file'
+['電子']
+30
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/dispatcher.py", line 555, in process_update
+    handler.handle_update(update, self, check, context)
+  File "/home/vincenthuang282/.local/lib/python3.6/site-packages/telegram/ext/handler.py", line 198, in handle_update
+    return self.callback(update, context)
+  File "/home/vincenthuang282/StockAndTelegram/response.py", line 76, in c_back_respons
+    PictureMaker(input_arr,days)
+  File "/home/vincenthuang282/StockAndTelegram/picturemaker_1.py", line 30, in PictureMaker
+    for row in os.listdir(dir):
+FileNotFoundError: [Errno 2] No such file or directory: 'C:./result_file'

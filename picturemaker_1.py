@@ -26,7 +26,7 @@ def PictureMaker(input,day):
     elif(day=='60'):
         size=4
         days=60
-    dir = r"C:./result_file"
+    dir = r"./result_file"
     for row in os.listdir(dir):
         file_name.append(row[:-4])
     for search in input:
