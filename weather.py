@@ -37,7 +37,6 @@ def weather(location):
     query=parse.quote(country+'/'+city+'/'+city+'-'+number[city])
     list=[]
     url='https://tw.news.yahoo.com/weather/'+query
-    print(url)
     html=req.get(url)
     soup=BeautifulSoup(html.text,'html.parser')
     result_temparature_highiest_lowest=soup.findAll('span',attrs={'class':'Va(m) Px(6px)'})
@@ -47,5 +46,4 @@ def weather(location):
     list.append(soup.find('div',attrs={'data-reactid':'409'}).text)
     list.append(soup.find('div',attrs={'data-reactid':'412'}).text)
 
-    return city+"\n"+now_time+"\n當日最高溫度:"+list[0]+"\n當日最低溫度:"+list[1]+"\n現在溫度:"+list[2]+"°\n現在體感溫度:"+list[3]+"\n現在濕度:"+list[4]
-
+    return city+"\n"+now_time[0:10]+"\n當日最高溫度:"+list[0]+"\n當日最低溫度:"+list[1]+"\n現在溫度:"+list[2]+"°\n現在體感溫度:"+list[3]+"\n現在濕度:"+list[4]

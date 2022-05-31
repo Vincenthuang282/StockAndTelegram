@@ -53,7 +53,6 @@ def picture_command(update,context):
     
     ##print(telegram_token)
     telegram_chat_id=update['message']['chat']['id']
-    print(telegram_chat_id)
     
     #PictureMaker(input_arr,day)
     #PictureMaker2(day)
@@ -142,6 +141,7 @@ def handle_location(update,context):
     if city == list :
         city=location[len(location)-4]
     city=city[0:2] 
+    print(update)
     update.message.reply_text(weather(city))
     
 
