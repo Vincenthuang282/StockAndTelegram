@@ -20,9 +20,9 @@ import sqlite3
 #c.execute(' CREATE TABLE stocks (Date text, Stock_Name text , Price real) ')
 #c.execute("delete from stocks where Price=3.0")
 #
-conn=sqlite3.connect('/home/vincenthuang282/StockAndTelegram/test.db')
+conn=sqlite3.connect('./test.db')
 c=conn.cursor()
-for d in range(0,10,1):
+for d in range(0,20,1):
     print(d)
     now=datetime.now()
     date_time= datetime.now()-timedelta(days=d)

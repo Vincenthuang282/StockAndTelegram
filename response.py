@@ -13,9 +13,12 @@ import sys
 #    update.message.reply_text('Type Something Random to get started it !')
     
 def help_command(update , context):
-    with open(r"C:/Users/VINCENT/OneDrive/桌面/StockAndTelegram/help.txt","r",encoding='utf-8') as file:
-        list=file.read()
-        update.message.reply_text(list)
+    update.message.reply_text("Manual",
+                    reply_markup=InlineKeyboardMarkup([
+                        [InlineKeyboardButton(text="Index",callback_data="Index")],
+                        [InlineKeyboardButton(text="News",callback_data="News")],
+                        [InlineKeyboardButton(text="Weather",callback_data="Weather")],
+                                       ]))
 
 #def handle_message(update, context):
 #    text=str(update.message.text).lower()
@@ -60,22 +63,44 @@ def picture_command(update,context):
     #bot.send_photo(chat_id=telegram_chat_id,photo=open(photo_path,'rb'))
 
 def c_back_respons(update,context):
+    Help_Selection=["Index","News","Weather"]
+    telegram_chat_id=update.callback_query.message.chat.id
+    telegram_token=sys.argv[1]
+    bot=telegram.Bot(token=telegram_token)
     input_arr=[]
     days=str(update.callback_query.data)
-    
-    arr=str(update.callback_query.message.text[32:]).split()
-    for i in range(0,len(arr),1):
-        input_arr.append(arr[i])
-    telegram_token=sys.argv[1]
-    telegram_chat_id=update.callback_query.message.chat.id
-    PictureMaker(input_arr,days)
-    PictureMaker2(days)
-    image_merge()
-    photo_path=r'C:\Users\VINCENT\OneDrive\桌面\StockAndTelegram\picture\image_result.jpg'
-    bot=telegram.Bot(token=telegram_token)
-    bot.send_photo(chat_id=telegram_chat_id,photo=open(photo_path,'rb'))
-    
+    if days not in Help_Selection:
+        arr=str(update.callback_query.message.text[32:]).split()
+        for i in range(0,len(arr),1):
+            input_arr.append(arr[i])
+        PictureMaker(input_arr,days)
+        PictureMaker2(days)
+        image_merge()
+        photo_path=r'./picture/image_result.jpg'
+        bot.send_photo(chat_id=telegram_chat_id,photo=open(photo_path,'rb'))
+    else :
+        if days=="Index":
+            with open(r"./help_index.txt","r",encoding='utf-8') as file:
+                list=file.read()
+                send_telegram_msg(list,telegram_chat_id)
+        elif days=="News":
+            with open(r"./help_news.txt","r",encoding='utf-8') as file:
+                list=file.read()
+                send_telegram_msg(list,telegram_chat_id)
+        elif days=="Weather":
+            send_telegram_msg("傳送目前所在位置:",chat_id=telegram_chat_id)
+            location_photo_path1=r'./picture/location_1.jpg'
+            location_photo_path2=r'./picture/location_2.jpg'
+            location_photo_path3=r'./picture/location_3.jpg'
+            bot.send_photo(chat_id=telegram_chat_id,photo=open(location_photo_path1,'rb'))
+            bot.send_photo(chat_id=telegram_chat_id,photo=open(location_photo_path2,'rb'))
+            bot.send_photo(chat_id=telegram_chat_id,photo=open(location_photo_path3,'rb'))
 
+
+def send_telegram_msg(msg,chat_id):
+    token_id = sys.argv[1]
+    bot = telegram.Bot(token=token_id)
+    bot.sendMessage(chat_id=chat_id,text=msg)
 
 def Stock_command(update , context):
         #print(update)

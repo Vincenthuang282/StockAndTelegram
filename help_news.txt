@@ -1,0 +1,4 @@
+輸入:
+    若要查詢特斯拉的新聞:
+    /news TSLA 
+    /news tsla

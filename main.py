@@ -20,7 +20,7 @@ def telegram_bot():
     ## callback--> the callback function for this handler. ##
     ##dp.add_handler(CommandHandler("start",R.start_command))
     dp.add_handler(CommandHandler("help",R.help_command))
-    dp.add_handler(CommandHandler("Stock",R.Stock_command))
+    dp.add_handler(CommandHandler("news",R.Stock_command))
     dp.add_handler(CommandHandler("Picture",R.picture_command))
     
     dp.add_handler(CallbackQueryHandler(R.c_back_respons))

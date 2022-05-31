@@ -6,7 +6,7 @@ stock_info_price=[]
 stock_info_date=[]
 stock_info_name=[]
 count=0
-conn =sqlite3.connect('/home/vincenthuang282/StockAndTelegram/test.db')
+conn =sqlite3.connect('./test.db')
 c=conn.cursor()
 result=c.execute("select * from stocks group by Stock_Name")
 for row in result:

@@ -3,7 +3,6 @@ import requests as req
 
 
 def stock(stock_name):
-    stock_name="TSLA"
     count=1
     list=[]
     url='https://finance.yahoo.com/quote/'+stock_name
