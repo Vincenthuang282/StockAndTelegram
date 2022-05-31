@@ -44,7 +44,9 @@ def weather(location):
     for result in result_temparature_highiest_lowest:
         list.append(result.text)
     list.append(soup.find('span',attrs={'data-reactid':'37'}).text)
+    list.append(soup.find('div',attrs={'data-reactid':'409'}).text)
     list.append(soup.find('div',attrs={'data-reactid':'412'}).text)
-    list.append(soup.find('div',attrs={'data-reactid':'415'}).text)
 
     return city+"\n"+now_time+"\n當日最高溫度:"+list[0]+"\n當日最低溫度:"+list[1]+"\n現在溫度:"+list[2]+"°\n現在體感溫度:"+list[3]+"\n現在濕度:"+list[4]
+
+print(weather("臺北"))
