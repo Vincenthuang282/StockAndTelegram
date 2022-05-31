@@ -49,4 +49,3 @@ def weather(location):
 
     return city+"\n"+now_time+"\n當日最高溫度:"+list[0]+"\n當日最低溫度:"+list[1]+"\n現在溫度:"+list[2]+"°\n現在體感溫度:"+list[3]+"\n現在濕度:"+list[4]
 
-print(weather("臺北"))
