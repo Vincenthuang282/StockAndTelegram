@@ -141,7 +141,7 @@ def handle_location(update,context):
     if city == list :
         city=location[len(location)-4]
     city=city[0:2] 
-    print(update)
+    #print(update)
     update.message.reply_text(weather(city))
     
 
