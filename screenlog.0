@@ -120,3 +120,8 @@ Traceback (most recent call last):
   File "/home/vincenthuang282/StockAndTelegram/picturemaker_1.py", line 30, in PictureMaker
     for row in os.listdir(dir):
 FileNotFoundError: [Errno 2] No such file or directory: 'C:./result_file'
+/home/vincenthuang282/.local/lib/python3.6/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+Bot Start...
+['電子']
+30
