@@ -125,3 +125,10 @@ FileNotFoundError: [Errno 2] No such file or directory: 'C:./result_file'
 Bot Start...
 ['電子']
 30
+/home/vincenthuang282/.local/lib/python3.6/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+Bot Start...
+['電子']
+30
+['電子']
+30
