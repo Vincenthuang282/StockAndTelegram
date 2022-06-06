@@ -75,22 +75,22 @@ def c_back_respons(update,context):
         PictureMaker(input_arr,days)
         PictureMaker2(days)
         image_merge()
-        photo_path=r'./picture/image_result.jpg'
+        photo_path=r'/home/vincenthuang282/StockAndTelegram/picture/image_result.jpg'
         bot.send_photo(chat_id=telegram_chat_id,photo=open(photo_path,'rb'))
     else :
         if days=="Index":
-            with open(r"./help_index.txt","r",encoding='utf-8') as file:
+            with open(r"/home/vincenthuang282/StockAndTelegram/help_index.txt","r",encoding='utf-8') as file:
                 list=file.read()
                 send_telegram_msg(list,telegram_chat_id)
         elif days=="News":
-            with open(r"./help_news.txt","r",encoding='utf-8') as file:
+            with open(r"/home/vincenthuang282/StockAndTelegram/help_news.txt","r",encoding='utf-8') as file:
                 list=file.read()
                 send_telegram_msg(list,telegram_chat_id)
         elif days=="Weather":
             send_telegram_msg("傳送目前所在位置:",chat_id=telegram_chat_id)
-            location_photo_path1=r'./picture/location_1.jpg'
-            location_photo_path2=r'./picture/location_2.jpg'
-            location_photo_path3=r'./picture/location_3.jpg'
+            location_photo_path1=r'/home/vincenthuang282/StockAndTelegram/picture/location_1.jpg'
+            location_photo_path2=r'/home/vincenthuang282/StockAndTelegram/picture/location_2.jpg'
+            location_photo_path3=r'/home/vincenthuang282/StockAndTelegram/picture/location_3.jpg'
             bot.send_photo(chat_id=telegram_chat_id,photo=open(location_photo_path1,'rb'))
             bot.send_photo(chat_id=telegram_chat_id,photo=open(location_photo_path2,'rb'))
             bot.send_photo(chat_id=telegram_chat_id,photo=open(location_photo_path3,'rb'))

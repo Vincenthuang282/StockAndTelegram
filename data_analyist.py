@@ -6,7 +6,7 @@ stock_info_price=[]
 stock_info_date=[]
 stock_info_name=[]
 count=0
-conn =sqlite3.connect('./test.db')
+conn =sqlite3.connect('/home/vincenthuang282/StockAndTelegram/test.db')
 c=conn.cursor()
 result=c.execute("select * from stocks group by Stock_Name")
 for row in result:
@@ -42,7 +42,7 @@ for stock_name in index_type:
             status='5'
             sum=0
         ##print(stock_info_name[i]+" "+str(stock_info_date[i])+" "+str(stock_info_price[i])+" "+str(average)+" "+status)
-        a=open("./result_file/"+stock_info_name[i]+'.csv','a',encoding='utf-8',newline='')
+        a=open("/home/vincenthuang282/StockAndTelegram/result_file/"+stock_info_name[i]+'.csv','a',encoding='utf-8',newline='')
         writer_a=csv.writer(a)
         writer_a.writerow([stock_info_date[i],stock_info_name[i],stock_info_price[i],average,status])
     stock_info_price=[]

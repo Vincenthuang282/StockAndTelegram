@@ -26,7 +26,7 @@ def PictureMaker(input,day):
     elif(day=='60'):
         size=4
         days=60
-    dir = r"./result_file"
+    dir = r"/home/vincenthuang282/StockAndTelegram/result_file"
     for row in os.listdir(dir):
         file_name.append(row[:-4])
     for search in input:
@@ -44,8 +44,8 @@ def PictureMaker(input,day):
     sorted_data={}
     arr=[]
     for k in range(0,len(selects),1):
-        ChineseFont1 = FontProperties(fname = r'./SIMSUN.TTC')
-        a=open(r"./result_file/"+selects[k]+'.csv','r',encoding='utf-8',newline='')
+        ChineseFont1 = FontProperties(fname = r'/home/vincenthuang282/StockAndTelegram/SIMSUN.TTC')
+        a=open(r"/home/vincenthuang282/StockAndTelegram/result_file/"+selects[k]+'.csv','r',encoding='utf-8',newline='')
         reader=csv.reader(a)
         status.append([])
         status_reverse.append([])
@@ -90,6 +90,6 @@ def PictureMaker(input,day):
         heat_map.set_xticklabels(x)
     plt.title("指數溫度圖",fontproperties=ChineseFont1,x=0.5,y=1.03)
     plt.tight_layout()
-    plt.savefig(r"./picture/result.jpg")
+    plt.savefig(r"/home/vincenthuang282/StockAndTelegram/picture/result.jpg")
     plt.close()
     #plt.show()
